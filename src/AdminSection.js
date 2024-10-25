@@ -1,7 +1,7 @@
 // src/AdminSection.js
 import React, { useState } from "react";
 
-const AdminSection = ({ addItem }) => {
+const AdminSection = ({ addItem, handleLogout }) => {
   const [inputValue, setInputValue] = useState("");
 
   const handleSubmit = (e) => {
@@ -31,6 +31,13 @@ const AdminSection = ({ addItem }) => {
           Add Item
         </button>
       </form>
+      {/* Logout button in Admin Section */}
+      <button
+        onClick={handleLogout}
+        className="mt-4 px-4 py-2 text-red-500 hover:underline"
+      >
+        Logout
+      </button>
     </div>
   );
 };
